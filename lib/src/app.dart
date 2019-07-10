@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'ui/movie_list.dart';
 import 'package:inject/inject.dart';
-import 'ui/movie_detail.dart';
-import 'models/item_model.dart';
 import 'blocs/movies_bloc.dart';
 import 'blocs/movie_detail_bloc.dart';
+import 'blocs/songSearch_bloc.dart';
+import 'ui/movie_list.dart';
 import 'ui/home.dart';
 import 'ui/createParty.dart';
 import 'ui/joinParty.dart';
+import 'ui/songSearch.dart';
 
 class App extends StatelessWidget {
   final MoviesBloc moviesBloc;
+  final SongSearchBloc songSearchBloc;
   final MovieDetailBloc movieDetailBloc;
 
   @provide
-  App(this.moviesBloc, this.movieDetailBloc) : super();
+  App(this.moviesBloc, this.movieDetailBloc, this.songSearchBloc) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +27,7 @@ class App extends StatelessWidget {
         'movies' :(context) => MovieList(moviesBloc),
         'joinParty':(context) => JoinParty(),
         'createParty':(context) => CreateParty(),
+        'songSearch':(context) => SongSearch(songSearchBloc),
       }
     );
   }

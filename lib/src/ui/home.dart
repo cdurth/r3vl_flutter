@@ -32,6 +32,13 @@ class Home extends StatelessWidget {
             },
             child: const Text('Create Party', style: TextStyle(fontSize: 20)),
           ),
+          const SizedBox(height: 30),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, 'songSearch');
+            },
+            child: const Text('Search Song', style: TextStyle(fontSize: 20)),
+          ),
         ]),
       ),
       drawer: Drawer(
