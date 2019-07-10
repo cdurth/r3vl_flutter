@@ -6,4 +6,5 @@ design principles/patterns and scaffold from https://medium.com/flutterpub/archi
 
 ### Rebuilding DI Graph & cleanup
 windows(uses cleanup.bat): `flutter packages pub run build_runner build && cleanup.bat`
+
 mac/linux/cygwin: `flutter packages pub run build_runner build --delete-conflicting-outputs && find . -size 0 -delete`
