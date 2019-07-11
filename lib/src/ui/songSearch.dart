@@ -1,9 +1,9 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import '../blocs/songSearch_bloc.dart';
 
 import '../models/youtube_autocomplete_model.dart';
+
+import 'components/InputComponent.dart';
 
 class SongSearch extends StatefulWidget {
   final SongSearchBloc _bloc;
@@ -48,21 +48,7 @@ class SongSearchState extends State<SongSearch> {
       body: Container(
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                onChanged: (value) {
-                  this.fetchSuggestions(value);
-                },
-                controller: editingController,
-                decoration: InputDecoration(
-                    labelText: "Search",
-                    hintText: "Search",
-                    suffixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5.0)))),
-              ),
-            ),
+            InputComponent(labelText: 'Search', hintText: 'Search', icon: Icons.search, controller: editingController, onChanged: (value) => this.fetchSuggestions(value),),
             StreamBuilder(
               stream: widget._bloc.suggestions,
               builder:

@@ -8,3 +8,7 @@ design principles/patterns and scaffold from https://medium.com/flutterpub/archi
 windows(uses cleanup.bat): `flutter packages pub run build_runner build && cleanup.bat`
 
 mac/linux/cygwin: `flutter packages pub run build_runner build --delete-conflicting-outputs && find . -size 0 -delete`
+
+### Known Issues
+
+* The `inject` submodule contains errors in the example and test apps that cause the compiler to bomb out. You will need to delete these directories.

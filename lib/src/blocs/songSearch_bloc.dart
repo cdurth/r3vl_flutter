@@ -1,7 +1,6 @@
 import '../resources/repository.dart';
 import 'package:rxdart/rxdart.dart';
 import '../models/youtube_autocomplete_model.dart';
-import '../models/item_model.dart';
 import 'package:inject/inject.dart';
 import 'bloc_base.dart';
 

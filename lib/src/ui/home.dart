@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'myDrawer.dart';
+import 'package:my_movies/src/ui/components/myDrawer.dart';
 
 class Home extends StatelessWidget {
   final String title;
