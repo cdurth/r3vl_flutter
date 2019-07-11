@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'myDrawer.dart';
 
 class JoinParty extends StatelessWidget {
   @override
@@ -7,7 +8,8 @@ class JoinParty extends StatelessWidget {
         appBar: AppBar(
           title: Text('Join Party'),
         ),
-        body: Center(child: Text('Join Party Placeholder'))
+        body: Center(child: Text('Join Party Placeholder')),
+        drawer: MyDrawer(),
     );
   }
 }
